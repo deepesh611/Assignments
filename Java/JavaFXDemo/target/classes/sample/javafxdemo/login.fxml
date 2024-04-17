@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<!--<?import javafx.scene.effect.Light.Distant?>-->
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.javafxdemo.HelloController">
+    <left>
+        <AnchorPane prefHeight="400.0" prefWidth="210.0" style="-fx-background-color: #E96151;" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" layoutX="13.0" layoutY="49.0" prefHeight="18.0" prefWidth="202.0" text="Pluto" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                    <font>
+                        <Font name="Verdana Bold" size="24.0" />
+                    </font>
+                    <effect>
+                        <Glow>
+                            <input>
+                                <DropShadow />
+                            </input>
+                        </Glow>
+                    </effect>
+                </Label>
+                <Label alignment="CENTER" layoutX="13.0" layoutY="94.0" prefHeight="18.0" prefWidth="202.0" text="Planet 9" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+                    <font>
+                        <Font name="Verdana Bold" size="24.0" />
+                    </font>
+                    <effect>
+                        <Glow>
+                            <input>
+                                <DropShadow />
+                            </input>
+                        </Glow>
+                    </effect>
+                </Label>
+                <Line endX="66.5999755859375" endY="7.8000030517578125" layoutX="114.0" layoutY="79.0" startX="-63.79998779296875" startY="7.8000030517578125" stroke="#f4f2f2" />
+            </children>
+        </AnchorPane>
+    </left>
+    <right>
+        <AnchorPane prefHeight="400.0" prefWidth="332.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="26.0" prefHeight="18.0" prefWidth="289.0" text="LOGIN PAGE">
+                    <font>
+                        <Font name="Berlin Sans FB" size="24.0" />
+                    </font>
+                    <effect>
+                        <InnerShadow />
+                    </effect>
+                </Label>
+                <Label alignment="CENTER" layoutX="-48.0" layoutY="136.0" prefHeight="22.0" prefWidth="190.0" text="Username" textFill="#0b0b0b">
+                    <font>
+                        <Font name="Californian FB Bold" size="18.0" />
+                    </font>
+                    <effect>
+                        <Lighting>
+                            <bumpInput>
+                                <Shadow />
+                            </bumpInput>
+<!--                            <light>-->
+<!--                                <Light.Distant />-->
+<!--                            </light>-->
+                        </Lighting>
+                    </effect>
+                </Label>
+                <Label alignment="CENTER" layoutX="-48.0" layoutY="185.0" prefHeight="22.0" prefWidth="186.0" text="Password" textFill="#0b0b0b">
+                    <font>
+                        <Font name="Californian FB Bold" size="18.0" />
+                    </font>
+                    <effect>
+                        <Lighting>
+                            <bumpInput>
+                                <Shadow />
+                            </bumpInput>
+<!--                            <light>-->
+<!--                                <Light.Distant />-->
+<!--                            </light>-->
+                        </Lighting>
+                    </effect>
+                </Label>
+                <TextField fx:id="usernameField" layoutX="96.0" layoutY="134.0" prefHeight="26.0" prefWidth="190.0" promptText="username">
+                    <effect>
+                        <Glow />
+                    </effect>
+                </TextField>
+                <PasswordField fx:id="passwordField" layoutX="95.0" layoutY="183.0" prefHeight="26.0" prefWidth="192.0" promptText="password" />
+                <Button fx:id="loginButton" layoutX="32.0" layoutY="272.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="15.0" prefWidth="226.0" style="-fx-background-color: #E96151;" text="Login" textAlignment="CENTER" textFill="#f4f2f2" textOverrun="CLIP">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+                <Button fx:id="cancelButton" layoutX="31.0" layoutY="326.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="35.0" prefWidth="226.0" style="-fx-background-color: #E96151;" text="Cancel" textFill="#fafafa">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Button>
+            <Label fx:id="msgBoxR" alignment="CENTER" layoutX="20.0" layoutY="79.0" prefHeight="18.0" prefWidth="263.0" textFill="#dc1818">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="msgBoxG" alignment="CENTER" layoutX="20.0" layoutY="79.0" prefHeight="18.0" prefWidth="263.0" textFill="#34db18">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>
