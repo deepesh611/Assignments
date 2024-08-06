@@ -5,64 +5,64 @@ package Java;
 
 // // create a class named 'person' with attributes such as 'name', 'age' and 'address' and also includes appropriate methods such as setters and getters
 
-// class Person {
-//     private String name;
-//     private int age;
-//     private String address;
+//  class Person {
+//      private String name;
+//      private int age;
+//      private String address;
 
-//     public void setName(String name) {
-//         this.name = name;
-//     }
-//     public String getName() {
-//         return name;
-//     }
+//      public void setName(String name) {
+//          this.name = name;
+//      }
+//      public String getName() {
+//          return name;
+//      }
 
-//     public void setAge(int age) {
-//         this.age = age;
-//     }
-//     public int getAge() {
-//         return age;
-//     }
+//      public void setAge(int age) {
+//          this.age = age;
+//      }
+//      public int getAge() {
+//          return age;
+//      }
 
-//     public void setAddress(String address) {
-//         this.address = address;
-//     }
-//     public String getAddress() {
-//         return address;
-//     }
-
-
-//     public void display() {
-//         System.out.println("Name: " + name);
-//         System.out.println("Age: " + age);
-//         System.out.println("Address: " + address);
-//     }
-// }
+//      public void setAddress(String address) {
+//          this.address = address;
+//      }
+//      public String getAddress() {
+//          return address;
+//      }
 
 
-// public class Lab3 {
-//     public static void main(String[] args){
-//         Person person1 = new Person();
-//         person1.setName("John");
-//         person1.setAge(25);
-//         person1.setAddress("123 Main St, New York, NY");
-//         System.out.println("Name: " + person1.getName());
-//         System.out.println("Age: " + person1.getAge());
-//         System.out.println("Address: " + person1.getAddress());
+//      public void display() {
+//          System.out.println("Name: " + name);
+//          System.out.println("Age: " + age);
+//          System.out.println("Address: " + address);
+//      }
+//  }
 
-//         Person person2 = new Person();
-//         person2.setName("Jane");
-//         person2.setAge(30);
-//         person2.setAddress("456 Main St, New York, NY");
-//         System.out.println("Name: " + person2.getName());
-//         System.out.println("Age: " + person2.getAge());
-//         System.out.println("Address: " + person2.getAddress());
 
-//         // using display method
-//         person1.display();
-//         person2.display();
-//     }
-// }
+//  public class Lab3 {
+//      public static void main(String[] args){
+//          Person person1 = new Person();
+//          person1.setName("John");
+//          person1.setAge(25);
+//          person1.setAddress("123 Main St, New York, NY");
+//          System.out.println("Name: " + person1.getName());
+//          System.out.println("Age: " + person1.getAge());
+//          System.out.println("Address: " + person1.getAddress());
+
+//          Person person2 = new Person();
+//          person2.setName("Jane");
+//          person2.setAge(30);
+//          person2.setAddress("456 Main St, New York, NY");
+//          System.out.println("Name: " + person2.getName());
+//          System.out.println("Age: " + person2.getAge());
+//          System.out.println("Address: " + person2.getAddress());
+
+//          // using display method
+//          person1.display();
+//          person2.display();
+//      }
+//  }
 
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------

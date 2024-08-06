@@ -3,24 +3,24 @@ package Java;
 // EXERCISE - 1
 // Try, catch, and finally block
 
-// public class Lab5 {
-//     public static void main(String[] args){
-//         int[] arr = {1, 2, 3, 4, 5};
-//         try{
-//             for (int i = 0; i <= arr.length; i++){
-//                 System.out.println(arr[i]);
-//             }
-//         } 
+public class Lab5 {
+    public static void main(String[] args){
+        int[] arr = {1, 2, 3, 4, 5};
+        try{
+            for (int i = 0; i <= arr.length; i++){
+                System.out.println(arr[i]);
+            }
+        } 
         
-//         catch (ArrayIndexOutOfBoundsException e){
-//             System.out.println("Array index out of bound exception");
-//         } 
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Array index out of bound exception");
+        } 
         
-//         finally {
-//             System.out.println("Finally block executed");
-//         }
-//     }
-// }
+        finally {
+            System.out.println("Finally block executed");
+        }
+    }
+}
 
 
 // ------------------------------------------------------------------------------------------------------------------------------------------------
