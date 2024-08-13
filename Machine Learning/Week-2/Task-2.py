@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.impute import KNNImputer
 from sklearn.metrics import pairwise_distances
 
-df_iris = pd.read_csv("C:/Users/devan/Downloads/Iris.csv")
+df_iris = pd.read_csv("Iris.csv")
 
 missing_columns = df_iris.columns[df_iris.isnull().any()]
 if 'Id' in missing_columns:
@@ -33,7 +33,7 @@ def custom_knn_imputer(df, k=3):
 
     return df_filled
 
-columns_to_drop=['Id','Species']
+columns_to_drop=['Id']
 
 df_custom_imputed = custom_knn_imputer(df_iris)
 print("\nCustom KNN Imputed DataFrame:\n", df_custom_imputed.head())
@@ -41,6 +41,5 @@ print("\nCustom KNN Imputed DataFrame:\n", df_custom_imputed.head())
 knn_imputer = KNNImputer(n_neighbors=3, weights="uniform", metric='nan_euclidean')
 df_inbuilt_imputed = pd.DataFrame(knn_imputer.fit_transform(df_iris.drop(columns=columns_to_drop)),
                                   columns=df_iris.columns.drop(columns_to_drop))
-df_inbuilt_imputed.insert(0, 'Id', df_iris['Id'])
-df_inbuilt_imputed.insert(5, 'Species', df_iris['Species'])  
+df_inbuilt_imputed.insert(0, 'Id', df_iris['Id']) 
 print("\nInbuilt KNN Imputed DataFrame:\n", df_inbuilt_imputed.head())
