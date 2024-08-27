@@ -1,57 +1,51 @@
-def median(data):
-    data.sort()
-    if len(data) % 2 == 0:
-        return (data[len(data)//2] + data[len(data)//2 - 1]) / 2
-    else:
-        return data[len(data)//2]
-    
+import numpy as np
+import matplotlib.pyplot as plt
 
-def Q1(data):
-    if len(data) % 2 == 0:
-        return median(data[:len(data)//2])
-    else:
-        return median(data[:len(data)//2])
+dataset=[12, 10, 11, 14, 76, 103, 13,15,12,16,17,11,16,25, 110, 20, 23, 27,19, 18,10,13,78, 15,14,20,28,32,87,
+23,25,19,22,28,17,27,80,15, 18, 22, 20,25,82,27,21,12,15,18,90,108,28,150]
+sortedData=sorted(dataset)
+plt.hist(dataset)
 
+# z score
+n=len(dataset)
+q1_index=n//4
+if (n%4==0):
+  q1=(sortedData[q1_index]+sortedData[q1_index-1])/2
+else :
+  q1=sortedData[q1_index]
 
-def Q3(data):
-    if len(data) % 2 == 0:
-        return median(data[len(data)//2:])
-    else:
-        return median(data[len(data)//2+1:])
+q3_index=3*n//4
+if (n%4==0):
+  q3=(sortedData[q3_index]+sortedData[q3_index-1])/2
+else :
+  q1=sortedData[q3_index]
 
+if n % 2 == 0:
+    median1 = sortedData[n//2]
+    median2 = sortedData[n//2 - 1]
+    q2 = (median1 + median2)/2
+else:
+    q2 = sortedData[n//2]
 
-def IQR(data):
-    return Q3(data) - Q1(data)
+# iqr and boundaries
+iqr=q3-q1
+lower=q1-(1.5*iqr)
+upper=q3+(1.5*iqr)
+print (lower, upper)
 
+print(q1,q2,q3)
 
-def LL(data):
-    return Q1(data) - 1.5 * IQR(data)
+outliers=[x for x in sortedData if x<lower or x>upper]
 
+# plot the box pot
+plt.figure(figsize=(10,6))
+plt.boxplot(dataset,vert=False,patch_artist=False)
+plt.title("boxplot")
+plt.xlabel("Value")
+plt.yticks([1],["Dataset"])
 
-def UL(data):
-    return Q3(data) + 1.5 * IQR(data)
+for outlier in outliers:
+  plt.annotate(str(outlier),xy=(outlier,1),xytext=(outlier,1.1),arrowprops=dict(facecolor='red',shrink=0.05))
 
-
-def Outliers(data):
-    return [x for x in data if x < LL(data) or x > UL(data)]
-
-
-def main():
-    data = [12, 10, 11, 14, 76, 103, 13,15,12,16,17,11,16,25, 110, 20, 23, 27,19, 18,10,13,78, 15,14,20,28,32,87, 23,25,19,22,28,17,27,80,15, 18, 22, 20,25,82,27,21,12,15,18,90,108,28,150]
-    
-    data.sort()
-    
-    print(f"Min: {min(data)}")
-    print(f"Max: {max(data)}")
-    print(f"Median: {median(data)}")
-    print(f"Q1: {Q1(data)}")
-    print(f"Q3: {Q3(data)}")
-    print(f"IQR: {IQR(data)}")
-    print(f"LL: {LL(data)}")
-    print(f"UL: {UL(data)}")
-    print(f"Outliers: {Outliers(data)}")
-    
-
-
-if __name__ == '__main__':
-    main()
+plt.grid(True)
+plt.show()
