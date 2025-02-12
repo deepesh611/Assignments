@@ -1,9 +1,9 @@
 
 env
+.venv
 .idea
+trial
 .vscode
-./test.md
-./.vscode/*
 ./112215055.docx
 ./BTP\ Report\ Sample.docx
 ./College\ Assignments.iml
@@ -20,3 +20,5 @@ Compiler Design\.ipynb_checkpoints
 ./Operating\ System/output
 
 Machine-Learning/Datasets
+
+.\Computer Graphics\.qtcreator

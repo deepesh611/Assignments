@@ -1,3 +1,0 @@
-D:/Assignments/Computer Graphics/Day-2(1)/cmake-build-debug/CMakeFiles/Day_2_1_.dir
-D:/Assignments/Computer Graphics/Day-2(1)/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Assignments/Computer Graphics/Day-2(1)/cmake-build-debug/CMakeFiles/rebuild_cache.dir
