@@ -10,47 +10,7 @@
 <button id="loginButton">Login with Google</button>
 
 <script type="module">
-    // Import Firebase modules at the top level
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
-    import { getAuth, GoogleAuthProvider, signInWithPopup } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
-
-    // Your Firebase configuration
-    const firebaseConfig = {
-        apiKey: "AIzaSyC9_E53ej26rebxeVPOz8ODDVFp7UhLfxc",
-        authDomain: "cc-assignment-b15b3.firebaseapp.com",
-        projectId: "cc-assignment-b15b3",
-        storageBucket: "cc-assignment-b15b3.firebasestorage.app",
-        messagingSenderId: "564301702493",
-        appId: "1:564301702493:web:63b7ec17b917a4320074b4",
-        measurementId: "G-Y12TCTSNWB"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    const auth = getAuth(app);
-
-    // Once the DOM is loaded, attach the event listener
-    document.addEventListener("DOMContentLoaded", () => {
-        const loginButton = document.getElementById("loginButton");
-        if (loginButton) {
-            loginButton.addEventListener("click", async () => {
-                console.log("Button clicked!");
-                try {
-                    const provider = new GoogleAuthProvider();
-                    const result = await signInWithPopup(auth, provider);
-                    console.log("Sign in result:", result);
-                    alert("Logged in as: " + result.user.displayName);
-                } catch (error) {
-                    console.error("Error during sign in:", error);
-                    alert("Error: " + error.message);
-                }
-            });
-        } else {
-            console.error("Login button not found!");
-        }
-    });
+    // Your Firebase Configurations
 </script>
 </body>
 </html>
